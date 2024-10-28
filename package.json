@@ -16,7 +16,20 @@
     "vite-ecosystem-ci:before-test": "node ./scripts/vite-ecosystem-ci/before-test.js && cd ./sandbox/react-vite-default-ts && yarn install",
     "vite-ecosystem-ci:build": "yarn task --task sandbox --template react-vite/default-ts --start-from=install",
     "vite-ecosystem-ci:test": "yarn task --task test-runner-dev --template react-vite/default-ts --start-from=dev",
-    "build-storybook": "build-storybook -o storybook-static"
+    "build-storybook": "storybook build",
+    "storybook": "storybook dev -p 6006"
   },
-  "packageManager": "yarn@4.4.0+sha512.91d93b445d9284e7ed52931369bc89a663414e5582d00eea45c67ddc459a2582919eece27c412d6ffd1bd0793ff35399381cb229326b961798ce4f4cc60ddfdb"
+  "packageManager": "yarn@4.4.0+sha512.91d93b445d9284e7ed52931369bc89a663414e5582d00eea45c67ddc459a2582919eece27c412d6ffd1bd0793ff35399381cb229326b961798ce4f4cc60ddfdb",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/addon-essentials": "^8.3.6",
+    "@storybook/addon-interactions": "^8.3.6",
+    "@storybook/addon-links": "^8.3.6",
+    "@storybook/addon-onboarding": "^8.3.6",
+    "@storybook/blocks": "^8.3.6",
+    "@storybook/nextjs": "^8.3.6",
+    "@storybook/react": "^8.3.6",
+    "@storybook/test": "^8.3.6",
+    "storybook": "^8.3.6"
+  }
 }
